@@ -1,0 +1,1794 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGILL (0x4) at pc=0x00007fec63e90cd5, pid=23619, tid=0x00007fec63a622c0
+#
+# JRE version: OpenJDK Runtime Environment (8.0_292-b09) (build 1.8.0_292-b09)
+# Java VM: OpenJDK 64-Bit Server VM GraalVM CE 21.1.0 (25.292-b09-jvmci-21.1-b05 mixed mode linux-amd64 compressed oops)
+# Problematic frame:
+# C  [libpthread.so.0+0xacd5]  __pthread_clockjoin_ex+0x255
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://github.com/oracle/graal/issues
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread is native thread
+
+siginfo: si_signo: 4 (SIGILL), si_code: 0 (SI_USER), sent from pid: 29593 (uid: 1000)
+
+Registers:
+RAX=0x00000000000000ca, RBX=0x00000000000000ca, RCX=0x00007fec63e90cd7, RDX=0x0000000000005c48
+RSP=0x00007ffe9e680560, RBP=0x00007ffe9e680600, RSI=0x0000000000000000, RDI=0x00007fec627db9d0
+R8 =0x0000000000000000, R9 =0x00007fec627db700, R10=0x0000000000000000, R11=0x0000000000000246
+R12=0x0000000000005c48, R13=0x00007fec627db9d0, R14=0x00007fec63c5e450, R15=0x00007fec627db700
+RIP=0x00007fec63e90cd5, EFLAGS=0x0000000000000246, CSGSFS=0x002b000000000033, ERR=0x0000000000000007
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x00007ffe9e680560)
+0x00007ffe9e680560:   00007ffe9e6806a0 00007ffe9e680590
+0x00007ffe9e680570:   0000000000000000 0100000000000000
+0x00007ffe9e680580:   0000000000000002 8000000000000006
+0x00007ffe9e680590:   00007fec63e90a60 00007fec627dbd28
+0x00007ffe9e6805a0:   0000000000000000 0000000000000000
+0x00007ffe9e6805b0:   0000000000000000 ce3bf89faf2df900
+0x00007ffe9e6805c0:   00000000ffffffff 0000000000100000
+0x00007ffe9e6805d0:   00007ffe9e680670 00007ffe9e680610
+0x00007ffe9e6805e0:   00007ffe9e6806a0 00007fec63c5e450
+0x00007ffe9e6805f0:   0000000000000000 00007fec63c6259d
+0x00007ffe9e680600:   00007ffe9e685cdb 00007fec627db700
+0x00007ffe9e680610:   0000000000000000 0000000000000000
+0x00007ffe9e680620:   0000000000001000 0000000000000000
+0x00007ffe9e680630:   0000000000100000 0000000000000000
+0x00007ffe9e680640:   0000000000000000 ce3bf89faf2df900
+0x00007ffe9e680650:   00007ffe9e680820 0000000000000000
+0x00007ffe9e680660:   0000000000100000 00007ffe9e6806a0
+0x00007ffe9e680670:   00007ffe9e680730 00007fec63c5d9aa
+0x00007ffe9e680680:   0000000000000001 000055b54cc98520
+0x00007ffe9e680690:   00007ffe9e6862f0 00007fec00000001
+0x00007ffe9e6806a0:   0000000000000000 000055b54cc98520
+0x00007ffe9e6806b0:   0000000000000001 00007ffe9e6862f0
+0x00007ffe9e6806c0:   00007fec63064790 00007fec63064740
+0x00007ffe9e6806d0:   00007fec630649e0 0000000000000000
+0x00007ffe9e6806e0:   0000000000000000 0000000000000000
+0x00007ffe9e6806f0:   0000000000000000 0000000000000000
+0x00007ffe9e680700:   00007ffe9e680820 0000000000000000
+0x00007ffe9e680710:   0000000000000003 000055b54cc98518
+0x00007ffe9e680720:   0000000000000000 000055b54cc982b8
+0x00007ffe9e680730:   00007ffe9e6848b0 00007fec63c60c18
+0x00007ffe9e680740:   00007ffe00000000 0000000000001000
+0x00007ffe9e680750:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x00007fec63e90cd5)
+0x00007fec63e90cb5:   00 00 00 bb ca 00 00 00 eb 20 90 e8 1b 93 00 00
+0x00007fec63e90cc5:   45 31 d2 44 89 e2 31 f6 41 89 c0 4c 89 ef 89 d8
+0x00007fec63e90cd5:   0f 05 44 89 c7 e8 61 93 00 00 45 8b 65 00 45 85
+0x00007fec63e90ce5:   e4 75 d8 eb b6 66 0f 1f 44 00 00 4c 8b 3c 24 41 
+
+Register to memory mapping:
+
+RAX=0x00000000000000ca is an unknown value
+RBX=0x00000000000000ca is an unknown value
+RCX=0x00007fec63e90cd7: <offset 0xacd7> in /lib/x86_64-linux-gnu/libpthread.so.0 at 0x00007fec63e86000
+RDX=0x0000000000005c48 is an unknown value
+RSP=0x00007ffe9e680560 is an unknown value
+RBP=0x00007ffe9e680600 is an unknown value
+RSI=0x0000000000000000 is an unknown value
+RDI=0x00007fec627db9d0 is pointing into the stack for thread: 0x00007fec5c00c000
+R8 =0x0000000000000000 is an unknown value
+R9 =0x00007fec627db700 is pointing into the stack for thread: 0x00007fec5c00c000
+R10=0x0000000000000000 is an unknown value
+R11=0x0000000000000246 is an unknown value
+R12=0x0000000000005c48 is an unknown value
+R13=0x00007fec627db9d0 is pointing into the stack for thread: 0x00007fec5c00c000
+R14=0x00007fec63c5e450: <offset 0x3450> in /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/bin/../lib/amd64/jli/libjli.so at 0x00007fec63c5b000
+R15=0x00007fec627db700 is pointing into the stack for thread: 0x00007fec5c00c000
+
+
+Stack: [0x00007ffe9e587000,0x00007ffe9e687000],  sp=0x00007ffe9e680560,  free space=997k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libpthread.so.0+0xacd5]  __pthread_clockjoin_ex+0x255
+
+
+---------------  P R O C E S S  ---------------
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+heap address: 0x000000049dc00000, size: 12836 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x00000007c0000000
+
+Heap:
+ PSYoungGen      total 903680K, used 688690K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 903168K, 76% used [0x00000006b4980000,0x00000006de9fca50,0x00000006ebb80000)
+  from space 512K, 12% used [0x00000007bfd80000,0x00000007bfd90000,0x00000007bfe00000)
+  to   space 512K, 0% used [0x00000007bfd00000,0x00000007bfd00000,0x00000007bfd80000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+
+Card table byte_map: [0x00007fec6039c000,0x00007fec61caf000] byte_map_base: 0x00007fec5deae000
+
+Marking Bits: (ParMarkBitMap*) 0x00007fec63a43f40
+ Begin Bits: [0x00007febe2ee0000, 0x00007febef770000)
+ End Bits:   [0x00007febef770000, 0x00007febfc000000)
+
+Polling page: 0x00007fec63ee0000
+
+CodeCache: size=245760Kb used=6522Kb max_used=6528Kb free=239237Kb
+ bounds [0x00007fec4d000000, 0x00007fec4d670000, 0x00007fec5c000000]
+ total_blobs=1955 nmethods=1485 adapters=384
+ compilation: enabled
+              stopped_count=0, restarted_count=0
+
+JVMCI Events (10 events):
+Event: 0.044 Thread 0x00007fec5c0e7800 waiting for initialization of JVMCI runtime 0
+Event: 0.045 Thread 0x00007fec5c0e3800 waiting for initialization of JVMCI runtime 0
+Event: 0.046 Thread 0x00007fec5c0eb800 initialized JVMCI runtime 0
+Event: 0.046 Thread 0x00007fec5c0e5800 done waiting for initialization of JVMCI runtime 0
+Event: 0.046 Thread 0x00007fec5c0e7800 done waiting for initialization of JVMCI runtime 0
+Event: 0.046 Thread 0x00007fec5c0e3800 done waiting for initialization of JVMCI runtime 0
+Event: 1.050 Thread 0x00007feb90001000 initializing JVMCI runtime -1
+Event: 1.063 Thread 0x00007feb90001000 initialized JVMCI runtime -1
+Event: 1.081 Thread 0x00007feb90044000 attached to JavaVM for JVMCI runtime 0
+Event: 1.083 Thread 0x00007feb90044000 detached from JavaVM for JVMCI runtime 0
+
+Compilation events (10 events):
+Event: 206.069 Thread 0x00007fec5c0f3000 1483       3       java.lang.invoke.LambdaFormEditor$Transform::inRange (36 bytes)
+Event: 206.069 Thread 0x00007fec5c0f5000 nmethod 1480 0x00007fec4d654f50 code [0x00007fec4d6550e0, 0x00007fec4d655408]
+Event: 206.069 Thread 0x00007fec5c0f1800 nmethod 1482 0x00007fec4d654b50 code [0x00007fec4d654cc0, 0x00007fec4d654e90]
+Event: 206.069 Thread 0x00007fec5c0f1800 1484       3       java.lang.invoke.LambdaFormEditor$Transform::<init> (28 bytes)
+Event: 206.069 Thread 0x00007fec5c0f3000 nmethod 1483 0x00007fec4d6547d0 code [0x00007fec4d654940, 0x00007fec4d654af0]
+Event: 206.069 Thread 0x00007fec5c0f1800 nmethod 1484 0x00007fec4d6541d0 code [0x00007fec4d654360, 0x00007fec4d654688]
+Event: 206.069 Thread 0x00007fec5c0f5000 1485       3       java.lang.invoke.BoundMethodHandle$Species_L::make (11 bytes)
+Event: 206.069 Thread 0x00007fec5c0e0800 nmethod 1476 0x00007fec4d65dcd0 code [0x00007fec4d65de40, 0x00007fec4d65e130]
+Event: 206.069 Thread 0x00007fec5c0f5000 nmethod 1485 0x00007fec4d653d10 code [0x00007fec4d653e80, 0x00007fec4d6540e8]
+Event: 206.081 Thread 0x00007fec5c0eb800 nmethod 1477 0x00007fec4d65f9d0 code [0x00007fec4d65fc20, 0x00007fec4d661238]
+
+GC Heap History (10 events):
+Event: 6076.928 GC heap before
+{Heap before GC invocations=40581 (full 1):
+ PSYoungGen      total 906240K, used 905792K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 905728K, 100% used [0x00000006b4980000,0x00000006ebe00000,0x00000006ebe00000)
+  from space 512K, 12% used [0x00000007bfd00000,0x00000007bfd10000,0x00000007bfd80000)
+  to   space 512K, 0% used [0x00000007bfd80000,0x00000007bfd80000,0x00000007bfe00000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+Event: 6076.929 GC heap after
+Heap after GC invocations=40581 (full 1):
+ PSYoungGen      total 873472K, used 32K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 872960K, 0% used [0x00000006b4980000,0x00000006b4980000,0x00000006e9e00000)
+  from space 512K, 6% used [0x00000007bfd80000,0x00000007bfd88000,0x00000007bfe00000)
+  to   space 512K, 0% used [0x00000007bfd00000,0x00000007bfd00000,0x00000007bfd80000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+}
+Event: 6077.054 GC heap before
+{Heap before GC invocations=40582 (full 1):
+ PSYoungGen      total 873472K, used 872992K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 872960K, 100% used [0x00000006b4980000,0x00000006e9e00000,0x00000006e9e00000)
+  from space 512K, 6% used [0x00000007bfd80000,0x00000007bfd88000,0x00000007bfe00000)
+  to   space 512K, 0% used [0x00000007bfd00000,0x00000007bfd00000,0x00000007bfd80000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+Event: 6077.055 GC heap after
+Heap after GC invocations=40582 (full 1):
+ PSYoungGen      total 922112K, used 64K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 921600K, 0% used [0x00000006b4980000,0x00000006b4980000,0x00000006ecd80000)
+  from space 512K, 12% used [0x00000007bfd00000,0x00000007bfd10000,0x00000007bfd80000)
+  to   space 512K, 0% used [0x00000007bfd80000,0x00000007bfd80000,0x00000007bfe00000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+}
+Event: 6077.188 GC heap before
+{Heap before GC invocations=40583 (full 1):
+ PSYoungGen      total 922112K, used 921664K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 921600K, 100% used [0x00000006b4980000,0x00000006ecd80000,0x00000006ecd80000)
+  from space 512K, 12% used [0x00000007bfd00000,0x00000007bfd10000,0x00000007bfd80000)
+  to   space 512K, 0% used [0x00000007bfd80000,0x00000007bfd80000,0x00000007bfe00000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+Event: 6077.190 GC heap after
+Heap after GC invocations=40583 (full 1):
+ PSYoungGen      total 973824K, used 96K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 973312K, 0% used [0x00000006b4980000,0x00000006b4980000,0x00000006f0000000)
+  from space 512K, 18% used [0x00000007bfd80000,0x00000007bfd98000,0x00000007bfe00000)
+  to   space 512K, 0% used [0x00000007bfd00000,0x00000007bfd00000,0x00000007bfd80000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+}
+Event: 6077.332 GC heap before
+{Heap before GC invocations=40584 (full 1):
+ PSYoungGen      total 973824K, used 973408K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 973312K, 100% used [0x00000006b4980000,0x00000006f0000000,0x00000006f0000000)
+  from space 512K, 18% used [0x00000007bfd80000,0x00000007bfd98000,0x00000007bfe00000)
+  to   space 512K, 0% used [0x00000007bfd00000,0x00000007bfd00000,0x00000007bfd80000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+Event: 6077.333 GC heap after
+Heap after GC invocations=40584 (full 1):
+ PSYoungGen      total 937984K, used 32K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 937472K, 0% used [0x00000006b4980000,0x00000006b4980000,0x00000006edd00000)
+  from space 512K, 6% used [0x00000007bfd00000,0x00000007bfd08000,0x00000007bfd80000)
+  to   space 512K, 0% used [0x00000007bfd80000,0x00000007bfd80000,0x00000007bfe00000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+}
+Event: 6077.468 GC heap before
+{Heap before GC invocations=40585 (full 1):
+ PSYoungGen      total 937984K, used 937504K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 937472K, 100% used [0x00000006b4980000,0x00000006edd00000,0x00000006edd00000)
+  from space 512K, 6% used [0x00000007bfd00000,0x00000007bfd08000,0x00000007bfd80000)
+  to   space 512K, 0% used [0x00000007bfd80000,0x00000007bfd80000,0x00000007bfe00000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+Event: 6077.470 GC heap after
+Heap after GC invocations=40585 (full 1):
+ PSYoungGen      total 903680K, used 64K [0x00000006b4980000, 0x00000007bfe00000, 0x00000007c0000000)
+  eden space 903168K, 0% used [0x00000006b4980000,0x00000006b4980000,0x00000006ebb80000)
+  from space 512K, 12% used [0x00000007bfd80000,0x00000007bfd90000,0x00000007bfe00000)
+  to   space 512K, 0% used [0x00000007bfd00000,0x00000007bfd00000,0x00000007bfd80000)
+ ParOldGen       total 352768K, used 12648K [0x000000049dc00000, 0x00000004b3480000, 0x00000006b4980000)
+  object space 352768K, 3% used [0x000000049dc00000,0x000000049e85a3c0,0x00000004b3480000)
+ Metaspace       used 23390K, capacity 24666K, committed 24960K, reserved 1071104K
+  class space    used 2718K, capacity 2898K, committed 2944K, reserved 1048576K
+}
+
+Class unloading (0 events):
+No events
+
+Deoptimization events (10 events):
+Event: 0.669 Thread 0x00007fec5c579000 Uncommon trap: reason=null_assert_or_unreached0 action=reinterpret pc=0x00007fec4d585137 method=jdk.internal.org.objectweb.asm.ClassWriter.get(Ljdk/internal/org/objectweb/asm/Item;)Ljdk/internal/org/objectweb/asm/Item; @ 0
+Event: 0.669 Thread 0x00007fec5c579000 Uncommon trap: reason=null_assert_or_unreached0 action=reinterpret pc=0x00007fec4d58432c method=jdk.internal.org.objectweb.asm.Item.isEqualTo(Ljdk/internal/org/objectweb/asm/Item;)Z @ 0
+Event: 0.673 Thread 0x00007fec5c580800 Uncommon trap: reason=intrinsic_or_type_checked_inlining action=reinterpret pc=0x00007fec4d54e428 method=java.util.concurrent.ConcurrentHashMap.putVal(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object; @ 162
+Event: 0.674 Thread 0x00007fec5c582000 Uncommon trap: reason=intrinsic_or_type_checked_inlining action=reinterpret pc=0x00007fec4d54e428 method=java.util.concurrent.ConcurrentHashMap.putVal(Ljava/lang/Object;Ljava/lang/Object;Z)Ljava/lang/Object; @ 162
+Event: 0.876 Thread 0x00007fec5c585800 Uncommon trap: reason=null_assert_or_unreached0 action=reinterpret pc=0x00007fec4d60f720 method=cats.instances.ListInstances$$anon$1.foldMap(Lscala/collection/immutable/List;Lscala/Function1;Lcats/kernel/Monoid;)Ljava/lang/Object; @ 5
+Event: 1.071 Thread 0x00007feb90044000 Uncommon trap: reason=null_assert_or_unreached0 action=reinterpret pc=0x00007fec4d3673ec method=java.lang.String.replace(CC)Ljava/lang/String; @ 0
+Event: 1.072 Thread 0x00007feb90044000 Uncommon trap: reason=null_assert_or_unreached0 action=reinterpret pc=0x00007fec4d508e4e method=java.lang.String.regionMatches(ZILjava/lang/String;II)Z @ 147
+Event: 1.076 Thread 0x00007feb90044000 Uncommon trap: reason=null_assert_or_unreached0 action=reinterpret pc=0x00007fec4d54b8aa method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 134
+Event: 1.082 Thread 0x00007feb90044000 Uncommon trap: reason=range_check action=reinterpret pc=0x00007fec4d57d4c8 method=jdk.internal.org.objectweb.asm.ByteVector.putUTF8(Ljava/lang/String;)Ljdk/internal/org/objectweb/asm/ByteVector; @ 71
+Event: 1.084 Thread 0x00007feb90044000 Uncommon trap: reason=null_assert_or_unreached0 action=reinterpret pc=0x00007fec4d333e4f method=java.lang.String.startsWith(Ljava/lang/String;I)Z @ 0
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0.599 Thread 0x00007fec5c589800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.redeemWith$$anonfun$1(Lscala/Function1;Lscala/Function1;Lscala/util/Either;)Ljava/lang/Object;> (0x00000006b4a78248) thrown at [/b/b/e/main/graal-jvmci-8/src/share/vm/interpreter/linkResolver.cp
+Event: 0.600 Thread 0x00007feb6400f800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.open$$anonfun$3$$anonfun$adapted$1(Ljava/lang/Object;)Ljava/nio/file/OpenOption;> (0x00000006b4dd6888) thrown at [/b/b/e/main/graal-jvmci-8/src/share/vm/interpreter/linkResolver.cpp, line 597]
+Event: 0.601 Thread 0x00007fec5c565000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.fs2$io$file$FilesCompanionPlatform$AsyncFiles$$_$openFileChannel$$anonfun$1$$anonfun$1(Ljava/nio/channels/FileChannel;)V> (0x00000006b4fd5de0) thrown at [/b/b/e/main/graal-jvmci-8/src/share/vm/i
+Event: 0.602 Thread 0x00007fec5c565000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.flatten$$anonfun$1(Ljava/lang/Object;)Ljava/lang/Object;> (0x00000006b4fed460) thrown at [/b/b/e/main/graal-jvmci-8/src/share/vm/interpreter/linkResolver.cpp, line 597]
+Event: 0.668 Thread 0x00007fec5c579000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.cats$effect$kernel$instances$GenSpawnInstances$$anon$2$$_$product$$anonfun$1(Ljava/lang/Object;Ljava/lang/Object;)Lscala/Tuple2;> (0x00000006b5e77748) thrown at [/b/b/e/main/graal-jvmci-8/src/sh
+Event: 0.668 Thread 0x00007fec5c579000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.parMap2$$anonfun$1(Lscala/Function2;Lscala/Tuple2;)Ljava/lang/Object;> (0x00000006b5e82b68) thrown at [/b/b/e/main/graal-jvmci-8/src/share/vm/interpreter/linkResolver.cpp, line 597]
+Event: 0.677 Thread 0x00007fec5c585800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.combineAll$$anonfun$1(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000006b6207b90) thrown at [/b/b/e/main/graal-jvmci-8/src/share/vm/interpreter/linkResolver.cpp, line 597]
+Event: 0.677 Thread 0x00007fec5c589800 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.combineAll$$anonfun$1(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000006b4aaef50) thrown at [/b/b/e/main/graal-jvmci-8/src/share/vm/interpreter/linkResolver.cpp, line 597]
+Event: 206.062 Thread 0x00007feb1c013000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.handleShutdown$2$$anonfun$1(Ljava/util/concurrent/CountDownLatch;Lscala/util/Either;)V> (0x00000006b67d5628) thrown at [/b/b/e/main/graal-jvmci-8/src/share/vm/interpreter/linkResolver.cpp, line 
+Event: 206.064 Thread 0x00007feb1c013000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.handleShutdown$3$$anonfun$2(Ljava/util/concurrent/CountDownLatch;)Ljava/lang/Object;> (0x00000006b67e46c0) thrown at [/b/b/e/main/graal-jvmci-8/src/share/vm/interpreter/linkResolver.cpp, line 59
+
+Events (10 events):
+Event: 6076.928 Executing VM operation: ParallelGCFailedAllocation
+Event: 6076.929 Executing VM operation: ParallelGCFailedAllocation done
+Event: 6077.054 Executing VM operation: ParallelGCFailedAllocation
+Event: 6077.055 Executing VM operation: ParallelGCFailedAllocation done
+Event: 6077.188 Executing VM operation: ParallelGCFailedAllocation
+Event: 6077.190 Executing VM operation: ParallelGCFailedAllocation done
+Event: 6077.332 Executing VM operation: ParallelGCFailedAllocation
+Event: 6077.333 Executing VM operation: ParallelGCFailedAllocation done
+Event: 6077.468 Executing VM operation: ParallelGCFailedAllocation
+Event: 6077.470 Executing VM operation: ParallelGCFailedAllocation done
+
+
+Dynamic libraries:
+49dc00000-4b3480000 rw-p 00000000 00:00 0 
+4b3480000-6b4980000 ---p 00000000 00:00 0 
+6b4980000-7bfe00000 rw-p 00000000 00:00 0 
+7bfe00000-7c0000000 ---p 00000000 00:00 0 
+7c0000000-7c02e0000 rw-p 00000000 00:00 0 
+7c02e0000-800000000 ---p 00000000 00:00 0 
+55b54b323000-55b54b324000 r-xp 00000000 08:30 190598                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/bin/java
+55b54b523000-55b54b524000 r--p 00000000 08:30 190598                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/bin/java
+55b54b524000-55b54b525000 rw-p 00001000 08:30 190598                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/bin/java
+55b54cc98000-55b54ccb9000 rw-p 00000000 00:00 0                          [heap]
+7feafc000000-7feafc021000 rw-p 00000000 00:00 0 
+7feafc021000-7feb00000000 ---p 00000000 00:00 0 
+7feb00000000-7feb00021000 rw-p 00000000 00:00 0 
+7feb00021000-7feb04000000 ---p 00000000 00:00 0 
+7feb04000000-7feb0406b000 rw-p 00000000 00:00 0 
+7feb0406b000-7feb08000000 ---p 00000000 00:00 0 
+7feb0b1fc000-7feb0b1ff000 ---p 00000000 00:00 0 
+7feb0b1ff000-7feb0b2fd000 rw-p 00000000 00:00 0 
+7feb0b2fd000-7feb0b300000 ---p 00000000 00:00 0 
+7feb0b300000-7feb0b3fe000 rw-p 00000000 00:00 0 
+7feb0b3fe000-7feb0b401000 ---p 00000000 00:00 0 
+7feb0b401000-7feb0b4ff000 rw-p 00000000 00:00 0 
+7feb0b4ff000-7feb0b502000 ---p 00000000 00:00 0 
+7feb0b502000-7feb0b700000 rw-p 00000000 00:00 0 
+7feb0b800000-7feb0b900000 rw-p 00000000 00:00 0 
+7feb0ba00000-7feb0bb00000 rw-p 00000000 00:00 0 
+7feb0bc00000-7feb0bd00000 rw-p 00000000 00:00 0 
+7feb0be00000-7feb0bf00000 rw-p 00000000 00:00 0 
+7feb0c000000-7feb0c100000 rw-p 00000000 00:00 0 
+7feb0c200000-7feb0c300000 rw-p 00000000 00:00 0 
+7feb0c400000-7feb0c500000 rw-p 00000000 00:00 0 
+7feb0c600000-7feb0c700000 rw-p 00000000 00:00 0 
+7feb0c800000-7feb0c900000 rw-p 00000000 00:00 0 
+7feb0ca00000-7feb0cb00000 rw-p 00000000 00:00 0 
+7feb0cc00000-7feb0cd00000 rw-p 00000000 00:00 0 
+7feb0ce00000-7feb0cf00000 rw-p 00000000 00:00 0 
+7feb0d000000-7feb0d100000 rw-p 00000000 00:00 0 
+7feb0d200000-7feb0d300000 rw-p 00000000 00:00 0 
+7feb0d400000-7feb0d500000 rw-p 00000000 00:00 0 
+7feb0d600000-7feb0d700000 rw-p 00000000 00:00 0 
+7feb0d800000-7feb0d900000 rw-p 00000000 00:00 0 
+7feb0da00000-7feb0db00000 rw-p 00000000 00:00 0 
+7feb0dc00000-7feb0dd00000 rw-p 00000000 00:00 0 
+7feb0de00000-7feb0df00000 rw-p 00000000 00:00 0 
+7feb0e000000-7feb0e100000 rw-p 00000000 00:00 0 
+7feb0e200000-7feb0e300000 rw-p 00000000 00:00 0 
+7feb0e400000-7feb0e500000 rw-p 00000000 00:00 0 
+7feb0e600000-7feb0e700000 rw-p 00000000 00:00 0 
+7feb0e800000-7feb0e900000 rw-p 00000000 00:00 0 
+7feb0ea00000-7feb0eb00000 rw-p 00000000 00:00 0 
+7feb0ec00000-7feb0ed00000 rw-p 00000000 00:00 0 
+7feb0ee00000-7feb0ef00000 rw-p 00000000 00:00 0 
+7feb0f000000-7feb0f100000 rw-p 00000000 00:00 0 
+7feb0f200000-7feb0f300000 rw-p 00000000 00:00 0 
+7feb0f400000-7feb0f500000 rw-p 00000000 00:00 0 
+7feb0f600000-7feb0f700000 rw-p 00000000 00:00 0 
+7feb0f800000-7feb0f900000 rw-p 00000000 00:00 0 
+7feb0fa00000-7feb0fb00000 rw-p 00000000 00:00 0 
+7feb0fc00000-7feb0fd00000 rw-p 00000000 00:00 0 
+7feb0fe00000-7feb0ff00000 rw-p 00000000 00:00 0 
+7feb10000000-7feb10100000 rw-p 00000000 00:00 0 
+7feb10200000-7feb10300000 rw-p 00000000 00:00 0 
+7feb10400000-7feb10500000 rw-p 00000000 00:00 0 
+7feb10600000-7feb10700000 rw-p 00000000 00:00 0 
+7feb10800000-7feb10900000 rw-p 00000000 00:00 0 
+7feb10a00000-7feb10b00000 rw-p 00000000 00:00 0 
+7feb10c00000-7feb10d00000 rw-p 00000000 00:00 0 
+7feb10e00000-7feb10f00000 rw-p 00000000 00:00 0 
+7feb11000000-7feb11180000 rw-p 00000000 00:00 0 
+7feb11180000-7feb11200000 ---p 00000000 00:00 0 
+7feb11200000-7feb11300000 rw-p 00000000 00:00 0 
+7feb11400000-7feb11500000 rw-p 00000000 00:00 0 
+7feb11600000-7feb11700000 rw-p 00000000 00:00 0 
+7feb11800000-7feb11900000 rw-p 00000000 00:00 0 
+7feb11a00000-7feb11b00000 rw-p 00000000 00:00 0 
+7feb11c00000-7feb11d00000 rw-p 00000000 00:00 0 
+7feb11e00000-7feb11f00000 rw-p 00000000 00:00 0 
+7feb12000000-7feb12100000 rw-p 00000000 00:00 0 
+7feb12200000-7feb12300000 rw-p 00000000 00:00 0 
+7feb12400000-7feb12500000 rw-p 00000000 00:00 0 
+7feb12600000-7feb12700000 rw-p 00000000 00:00 0 
+7feb12800000-7feb12900000 rw-p 00000000 00:00 0 
+7feb12a00000-7feb12b00000 rw-p 00000000 00:00 0 
+7feb12c00000-7feb12d00000 rw-p 00000000 00:00 0 
+7feb12e00000-7feb12f00000 rw-p 00000000 00:00 0 
+7feb13000000-7feb13100000 rw-p 00000000 00:00 0 
+7feb13200000-7feb13300000 rw-p 00000000 00:00 0 
+7feb13400000-7feb13500000 rw-p 00000000 00:00 0 
+7feb13600000-7feb13700000 rw-p 00000000 00:00 0 
+7feb13800000-7feb13900000 rw-p 00000000 00:00 0 
+7feb13a00000-7feb13b00000 rw-p 00000000 00:00 0 
+7feb13c00000-7feb13d00000 rw-p 00000000 00:00 0 
+7feb13e00000-7feb13f00000 rw-p 00000000 00:00 0 
+7feb14000000-7feb14100000 rw-p 00000000 00:00 0 
+7feb14200000-7feb14300000 rw-p 00000000 00:00 0 
+7feb14400000-7feb14500000 rw-p 00000000 00:00 0 
+7feb14600000-7feb14700000 rw-p 00000000 00:00 0 
+7feb14800000-7feb14900000 rw-p 00000000 00:00 0 
+7feb14a00000-7feb14b00000 rw-p 00000000 00:00 0 
+7feb14c00000-7feb14d00000 rw-p 00000000 00:00 0 
+7feb14e00000-7feb14f00000 rw-p 00000000 00:00 0 
+7feb15000000-7feb15100000 rw-p 00000000 00:00 0 
+7feb15200000-7feb15300000 rw-p 00000000 00:00 0 
+7feb15400000-7feb15500000 rw-p 00000000 00:00 0 
+7feb15600000-7feb15700000 rw-p 00000000 00:00 0 
+7feb15800000-7feb15900000 rw-p 00000000 00:00 0 
+7feb15a00000-7feb15b00000 rw-p 00000000 00:00 0 
+7feb15c00000-7feb15d00000 rw-p 00000000 00:00 0 
+7feb15e00000-7feb15f00000 rw-p 00000000 00:00 0 
+7feb16000000-7feb16100000 rw-p 00000000 00:00 0 
+7feb16200000-7feb16300000 rw-p 00000000 00:00 0 
+7feb16400000-7feb16500000 rw-p 00000000 00:00 0 
+7feb16600000-7feb16700000 rw-p 00000000 00:00 0 
+7feb16800000-7feb16900000 rw-p 00000000 00:00 0 
+7feb16a00000-7feb16b00000 rw-p 00000000 00:00 0 
+7feb16c00000-7feb16d00000 rw-p 00000000 00:00 0 
+7feb16e00000-7feb16f00000 rw-p 00000000 00:00 0 
+7feb17000000-7feb17100000 rw-p 00000000 00:00 0 
+7feb17200000-7feb17300000 rw-p 00000000 00:00 0 
+7feb17400000-7feb17500000 rw-p 00000000 00:00 0 
+7feb17600000-7feb17700000 rw-p 00000000 00:00 0 
+7feb17800000-7feb17900000 rw-p 00000000 00:00 0 
+7feb17a00000-7feb17b00000 rw-p 00000000 00:00 0 
+7feb17c00000-7feb17d00000 rw-p 00000000 00:00 0 
+7feb17e00000-7feb17f00000 rw-p 00000000 00:00 0 
+7feb18000000-7feb18100000 rw-p 00000000 00:00 0 
+7feb18200000-7feb18300000 rw-p 00000000 00:00 0 
+7feb18400000-7feb18500000 rw-p 00000000 00:00 0 
+7feb18600000-7feb18700000 rw-p 00000000 00:00 0 
+7feb18800000-7feb18900000 rw-p 00000000 00:00 0 
+7feb18a00000-7feb18b00000 rw-p 00000000 00:00 0 
+7feb18c00000-7feb18d00000 rw-p 00000000 00:00 0 
+7feb18e00000-7feb18f00000 rw-p 00000000 00:00 0 
+7feb19000000-7feb19100000 rw-p 00000000 00:00 0 
+7feb19200000-7feb19300000 rw-p 00000000 00:00 0 
+7feb19400000-7feb19500000 rw-p 00000000 00:00 0 
+7feb19600000-7feb19700000 rw-p 00000000 00:00 0 
+7feb19800000-7feb19900000 rw-p 00000000 00:00 0 
+7feb19a00000-7feb19b00000 rw-p 00000000 00:00 0 
+7feb19c00000-7feb19d00000 rw-p 00000000 00:00 0 
+7feb19e00000-7feb19f00000 rw-p 00000000 00:00 0 
+7feb1a000000-7feb1a100000 rw-p 00000000 00:00 0 
+7feb1a200000-7feb1a400000 rw-p 00000000 00:00 0 
+7feb1a400000-7feb1a500000 rw-p 00000000 00:00 0 
+7feb1a600000-7feb1a700000 rw-p 00000000 00:00 0 
+7feb1a800000-7feb1a900000 rw-p 00000000 00:00 0 
+7feb1aa00000-7feb1ab00000 rw-p 00000000 00:00 0 
+7feb1ac00000-7feb1ad00000 rw-p 00000000 00:00 0 
+7feb1ae00000-7feb1af00000 rw-p 00000000 00:00 0 
+7feb1b000000-7feb1b100000 rw-p 00000000 00:00 0 
+7feb1b200000-7feb1b300000 rw-p 00000000 00:00 0 
+7feb1b400000-7feb1b500000 rw-p 00000000 00:00 0 
+7feb1b600000-7feb1b700000 rw-p 00000000 00:00 0 
+7feb1b800000-7feb1b900000 rw-p 00000000 00:00 0 
+7feb1ba00000-7feb1bb00000 rw-p 00000000 00:00 0 
+7feb1bc00000-7feb1bd00000 rw-p 00000000 00:00 0 
+7feb1be00000-7feb1bf00000 rw-p 00000000 00:00 0 
+7feb1c000000-7feb1c021000 rw-p 00000000 00:00 0 
+7feb1c021000-7feb20000000 ---p 00000000 00:00 0 
+7feb20100000-7feb20300000 rw-p 00000000 00:00 0 
+7feb20300000-7feb20400000 rw-p 00000000 00:00 0 
+7feb20500000-7feb20600000 rw-p 00000000 00:00 0 
+7feb20700000-7feb20800000 rw-p 00000000 00:00 0 
+7feb20900000-7feb20a00000 rw-p 00000000 00:00 0 
+7feb20b00000-7feb20c00000 rw-p 00000000 00:00 0 
+7feb20d00000-7feb20e00000 rw-p 00000000 00:00 0 
+7feb20f00000-7feb21000000 rw-p 00000000 00:00 0 
+7feb21100000-7feb21200000 rw-p 00000000 00:00 0 
+7feb21300000-7feb21400000 rw-p 00000000 00:00 0 
+7feb21500000-7feb21600000 rw-p 00000000 00:00 0 
+7feb21700000-7feb21900000 rw-p 00000000 00:00 0 
+7feb21900000-7feb21a00000 rw-p 00000000 00:00 0 
+7feb21b00000-7feb21c00000 rw-p 00000000 00:00 0 
+7feb21d00000-7feb21e00000 rw-p 00000000 00:00 0 
+7feb21f00000-7feb22000000 rw-p 00000000 00:00 0 
+7feb22100000-7feb22200000 rw-p 00000000 00:00 0 
+7feb22300000-7feb22400000 rw-p 00000000 00:00 0 
+7feb22500000-7feb22600000 rw-p 00000000 00:00 0 
+7feb22700000-7feb22800000 rw-p 00000000 00:00 0 
+7feb22900000-7feb22a00000 rw-p 00000000 00:00 0 
+7feb22b00000-7feb22c00000 rw-p 00000000 00:00 0 
+7feb22d00000-7feb22e00000 rw-p 00000000 00:00 0 
+7feb22f00000-7feb23000000 rw-p 00000000 00:00 0 
+7feb23100000-7feb23200000 rw-p 00000000 00:00 0 
+7feb23300000-7feb23400000 rw-p 00000000 00:00 0 
+7feb23500000-7feb23600000 rw-p 00000000 00:00 0 
+7feb236ff000-7feb23702000 ---p 00000000 00:00 0 
+7feb23702000-7feb23900000 rw-p 00000000 00:00 0 
+7feb23a00000-7feb23b00000 rw-p 00000000 00:00 0 
+7feb23c00000-7feb23d00000 rw-p 00000000 00:00 0 
+7feb23e00000-7feb23f00000 rw-p 00000000 00:00 0 
+7feb24000000-7feb24021000 rw-p 00000000 00:00 0 
+7feb24021000-7feb28000000 ---p 00000000 00:00 0 
+7feb28000000-7feb28100000 rw-p 00000000 00:00 0 
+7feb28200000-7feb28300000 rw-p 00000000 00:00 0 
+7feb28400000-7feb28600000 rw-p 00000000 00:00 0 
+7feb28600000-7feb28700000 rw-p 00000000 00:00 0 
+7feb28800000-7feb28900000 rw-p 00000000 00:00 0 
+7feb28a00000-7feb28b00000 rw-p 00000000 00:00 0 
+7feb28c00000-7feb28d00000 rw-p 00000000 00:00 0 
+7feb28e00000-7feb28f00000 rw-p 00000000 00:00 0 
+7feb29000000-7feb29100000 rw-p 00000000 00:00 0 
+7feb29200000-7feb29300000 rw-p 00000000 00:00 0 
+7feb29400000-7feb29500000 rw-p 00000000 00:00 0 
+7feb29600000-7feb29700000 rw-p 00000000 00:00 0 
+7feb29800000-7feb29900000 rw-p 00000000 00:00 0 
+7feb29a00000-7feb29b00000 rw-p 00000000 00:00 0 
+7feb29c00000-7feb29d00000 rw-p 00000000 00:00 0 
+7feb29e00000-7feb29f00000 rw-p 00000000 00:00 0 
+7feb2a000000-7feb2a100000 rw-p 00000000 00:00 0 
+7feb2a200000-7feb2a300000 rw-p 00000000 00:00 0 
+7feb2a400000-7feb2a600000 rw-p 00000000 00:00 0 
+7feb2a600000-7feb2a700000 rw-p 00000000 00:00 0 
+7feb2a800000-7feb2a900000 rw-p 00000000 00:00 0 
+7feb2aa00000-7feb2ab00000 rw-p 00000000 00:00 0 
+7feb2ac00000-7feb2ad00000 rw-p 00000000 00:00 0 
+7feb2ae00000-7feb2af00000 rw-p 00000000 00:00 0 
+7feb2b000000-7feb2b100000 rw-p 00000000 00:00 0 
+7feb2b200000-7feb2b300000 rw-p 00000000 00:00 0 
+7feb2b400000-7feb2b500000 rw-p 00000000 00:00 0 
+7feb2b600000-7feb2b700000 rw-p 00000000 00:00 0 
+7feb2b800000-7feb2b900000 rw-p 00000000 00:00 0 
+7feb2ba00000-7feb2bb00000 rw-p 00000000 00:00 0 
+7feb2bc00000-7feb2bd00000 rw-p 00000000 00:00 0 
+7feb2be00000-7feb2bf00000 rw-p 00000000 00:00 0 
+7feb2c000000-7feb2c021000 rw-p 00000000 00:00 0 
+7feb2c021000-7feb30000000 ---p 00000000 00:00 0 
+7feb30000000-7feb30021000 rw-p 00000000 00:00 0 
+7feb30021000-7feb34000000 ---p 00000000 00:00 0 
+7feb34000000-7feb34021000 rw-p 00000000 00:00 0 
+7feb34021000-7feb38000000 ---p 00000000 00:00 0 
+7feb38000000-7feb38021000 rw-p 00000000 00:00 0 
+7feb38021000-7feb3c000000 ---p 00000000 00:00 0 
+7feb3c000000-7feb3c021000 rw-p 00000000 00:00 0 
+7feb3c021000-7feb40000000 ---p 00000000 00:00 0 
+7feb40000000-7feb40bde000 rw-p 00000000 00:00 0 
+7feb40bde000-7feb44000000 ---p 00000000 00:00 0 
+7feb44000000-7feb44021000 rw-p 00000000 00:00 0 
+7feb44021000-7feb48000000 ---p 00000000 00:00 0 
+7feb48000000-7feb48021000 rw-p 00000000 00:00 0 
+7feb48021000-7feb4c000000 ---p 00000000 00:00 0 
+7feb4c000000-7feb4c021000 rw-p 00000000 00:00 0 
+7feb4c021000-7feb50000000 ---p 00000000 00:00 0 
+7feb50000000-7feb50021000 rw-p 00000000 00:00 0 
+7feb50021000-7feb54000000 ---p 00000000 00:00 0 
+7feb54000000-7feb54021000 rw-p 00000000 00:00 0 
+7feb54021000-7feb58000000 ---p 00000000 00:00 0 
+7feb58000000-7feb58021000 rw-p 00000000 00:00 0 
+7feb58021000-7feb5c000000 ---p 00000000 00:00 0 
+7feb5c000000-7feb5c021000 rw-p 00000000 00:00 0 
+7feb5c021000-7feb60000000 ---p 00000000 00:00 0 
+7feb60000000-7feb60021000 rw-p 00000000 00:00 0 
+7feb60021000-7feb64000000 ---p 00000000 00:00 0 
+7feb64000000-7feb64021000 rw-p 00000000 00:00 0 
+7feb64021000-7feb68000000 ---p 00000000 00:00 0 
+7feb68000000-7feb68021000 rw-p 00000000 00:00 0 
+7feb68021000-7feb6c000000 ---p 00000000 00:00 0 
+7feb6c000000-7feb6c021000 rw-p 00000000 00:00 0 
+7feb6c021000-7feb70000000 ---p 00000000 00:00 0 
+7feb70000000-7feb70021000 rw-p 00000000 00:00 0 
+7feb70021000-7feb74000000 ---p 00000000 00:00 0 
+7feb74000000-7feb74028000 rw-p 00000000 00:00 0 
+7feb74028000-7feb78000000 ---p 00000000 00:00 0 
+7feb78000000-7feb78021000 rw-p 00000000 00:00 0 
+7feb78021000-7feb7c000000 ---p 00000000 00:00 0 
+7feb7c000000-7feb7c021000 rw-p 00000000 00:00 0 
+7feb7c021000-7feb80000000 ---p 00000000 00:00 0 
+7feb80000000-7feb80021000 rw-p 00000000 00:00 0 
+7feb80021000-7feb84000000 ---p 00000000 00:00 0 
+7feb84000000-7feb84089000 rw-p 00000000 00:00 0 
+7feb84089000-7feb88000000 ---p 00000000 00:00 0 
+7feb88000000-7feb88100000 rw-p 00000000 00:00 0 
+7feb88200000-7feb88300000 rw-p 00000000 00:00 0 
+7feb88400000-7feb88500000 rw-p 00000000 00:00 0 
+7feb88600000-7feb88700000 rw-p 00000000 00:00 0 
+7feb88800000-7feb88900000 rw-p 00000000 00:00 0 
+7feb889f6000-7feb889ff000 r-xp 00000000 08:30 190291                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libmanagement.so
+7feb889ff000-7feb88bfe000 ---p 00009000 08:30 190291                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libmanagement.so
+7feb88bfe000-7feb88bff000 r--p 00008000 08:30 190291                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libmanagement.so
+7feb88bff000-7feb88c00000 rw-p 00009000 08:30 190291                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libmanagement.so
+7feb88c00000-7feb88d00000 rw-p 00000000 00:00 0 
+7feb88e00000-7feb88f00000 rw-p 00000000 00:00 0 
+7feb89000000-7feb89100000 rw-p 00000000 00:00 0 
+7feb891fd000-7feb89200000 ---p 00000000 00:00 0 
+7feb89200000-7feb892fe000 rw-p 00000000 00:00 0 
+7feb892fe000-7feb89301000 ---p 00000000 00:00 0 
+7feb89301000-7feb893ff000 rw-p 00000000 00:00 0 
+7feb893ff000-7feb89402000 ---p 00000000 00:00 0 
+7feb89402000-7feb89600000 rw-p 00000000 00:00 0 
+7feb896eb000-7feb896ee000 ---p 00000000 00:00 0 
+7feb896ee000-7feb897ec000 rw-p 00000000 00:00 0 
+7feb897ec000-7feb897ef000 ---p 00000000 00:00 0 
+7feb897ef000-7feb898ed000 rw-p 00000000 00:00 0 
+7feb898ed000-7feb898f0000 ---p 00000000 00:00 0 
+7feb898f0000-7feb899ee000 rw-p 00000000 00:00 0 
+7feb899ee000-7feb899f1000 ---p 00000000 00:00 0 
+7feb899f1000-7feb89aef000 rw-p 00000000 00:00 0 
+7feb89aef000-7feb89af2000 ---p 00000000 00:00 0 
+7feb89af2000-7feb89bf0000 rw-p 00000000 00:00 0 
+7feb89bf0000-7feb89bf3000 ---p 00000000 00:00 0 
+7feb89bf3000-7feb89cf1000 rw-p 00000000 00:00 0 
+7feb89cf1000-7feb89cf4000 ---p 00000000 00:00 0 
+7feb89cf4000-7feb89df2000 rw-p 00000000 00:00 0 
+7feb89df2000-7feb89df5000 ---p 00000000 00:00 0 
+7feb89df5000-7feb89ef3000 rw-p 00000000 00:00 0 
+7feb89ef3000-7feb89ef6000 ---p 00000000 00:00 0 
+7feb89ef6000-7feb89ff4000 rw-p 00000000 00:00 0 
+7feb89ff4000-7feb89ff7000 ---p 00000000 00:00 0 
+7feb89ff7000-7feb8a0f5000 rw-p 00000000 00:00 0 
+7feb8a0f5000-7feb8a0f8000 ---p 00000000 00:00 0 
+7feb8a0f8000-7feb8a1f6000 rw-p 00000000 00:00 0 
+7feb8a1f6000-7feb8a1f9000 ---p 00000000 00:00 0 
+7feb8a1f9000-7feb8a2f7000 rw-p 00000000 00:00 0 
+7feb8a2f7000-7feb8a2fa000 ---p 00000000 00:00 0 
+7feb8a2fa000-7feb8a3f8000 rw-p 00000000 00:00 0 
+7feb8a3f8000-7feb8a3fb000 ---p 00000000 00:00 0 
+7feb8a3fb000-7feb8a4f9000 rw-p 00000000 00:00 0 
+7feb8a4f9000-7feb8a4fc000 ---p 00000000 00:00 0 
+7feb8a4fc000-7feb8a5fa000 rw-p 00000000 00:00 0 
+7feb8a5fa000-7feb8a5fd000 ---p 00000000 00:00 0 
+7feb8a5fd000-7feb8a6fb000 rw-p 00000000 00:00 0 
+7feb8a6fb000-7feb8a6fe000 ---p 00000000 00:00 0 
+7feb8a6fe000-7feb8a7fc000 rw-p 00000000 00:00 0 
+7feb8a7fc000-7feb8a7ff000 ---p 00000000 00:00 0 
+7feb8a7ff000-7feb8a8fd000 rw-p 00000000 00:00 0 
+7feb8a8fd000-7feb8a900000 ---p 00000000 00:00 0 
+7feb8a900000-7feb8a9fe000 rw-p 00000000 00:00 0 
+7feb8a9fe000-7feb8aa01000 ---p 00000000 00:00 0 
+7feb8aa01000-7feb8aaff000 rw-p 00000000 00:00 0 
+7feb8aaff000-7feb8ab02000 ---p 00000000 00:00 0 
+7feb8ab02000-7feb8ad00000 rw-p 00000000 00:00 0 
+7feb8ae00000-7feb8af00000 rw-p 00000000 00:00 0 
+7feb8b000000-7feb8b200000 rw-p 00000000 00:00 0 
+7feb8b200000-7feb8b300000 rw-p 00000000 00:00 0 
+7feb8b400000-7feb8b500000 rw-p 00000000 00:00 0 
+7feb8b600000-7feb8b700000 rw-p 00000000 00:00 0 
+7feb8b800000-7feb8b900000 rw-p 00000000 00:00 0 
+7feb8ba00000-7feb8bb00000 rw-p 00000000 00:00 0 
+7feb8bc00000-7feb8bd00000 rw-p 00000000 00:00 0 
+7feb8be00000-7feb8bf00000 rw-p 00000000 00:00 0 
+7feb8c000000-7feb8c100000 rw-p 00000000 00:00 0 
+7feb8c200000-7feb8c300000 rw-p 00000000 00:00 0 
+7feb8c400000-7feb8c500000 rw-p 00000000 00:00 0 
+7feb8c600000-7feb8c700000 rw-p 00000000 00:00 0 
+7feb8c800000-7feb8c900000 rw-p 00000000 00:00 0 
+7feb8ca00000-7feb8cb00000 rw-p 00000000 00:00 0 
+7feb8cc00000-7feb8cd00000 rw-p 00000000 00:00 0 
+7feb8ce00000-7feb8cf00000 rw-p 00000000 00:00 0 
+7feb8d000000-7feb8d100000 rw-p 00000000 00:00 0 
+7feb8d200000-7feb8d300000 rw-p 00000000 00:00 0 
+7feb8d400000-7feb8d500000 rw-p 00000000 00:00 0 
+7feb8d600000-7feb8d700000 rw-p 00000000 00:00 0 
+7feb8d800000-7feb8d900000 rw-p 00000000 00:00 0 
+7feb8da00000-7feb8db00000 rw-p 00000000 00:00 0 
+7feb8dc00000-7feb8dd00000 rw-p 00000000 00:00 0 
+7feb8de00000-7feb8df00000 rw-p 00000000 00:00 0 
+7feb8e000000-7feb8e100000 rw-p 00000000 00:00 0 
+7feb8e200000-7feb8e300000 rw-p 00000000 00:00 0 
+7feb8e400000-7feb8e500000 rw-p 00000000 00:00 0 
+7feb8e600000-7feb8e700000 rw-p 00000000 00:00 0 
+7feb8e800000-7feb8e900000 rw-p 00000000 00:00 0 
+7feb8ea00000-7feb8eb00000 rw-p 00000000 00:00 0 
+7feb8ec00000-7feb8ed00000 rw-p 00000000 00:00 0 
+7feb8ee00000-7feb8ef00000 rw-p 00000000 00:00 0 
+7feb8f000000-7feb8f100000 rw-p 00000000 00:00 0 
+7feb8f200000-7feb8f300000 rw-p 00000000 00:00 0 
+7feb8f400000-7feb8f500000 rw-p 00000000 00:00 0 
+7feb8f600000-7feb8f700000 rw-p 00000000 00:00 0 
+7feb8f800000-7feb8f900000 rw-p 00000000 00:00 0 
+7feb8fa00000-7feb8fb00000 rw-p 00000000 00:00 0 
+7feb8fc00000-7feb8fd00000 rw-p 00000000 00:00 0 
+7feb8fe00000-7feb8ff00000 rw-p 00000000 00:00 0 
+7feb90000000-7feb90070000 rw-p 00000000 00:00 0 
+7feb90070000-7feb94000000 ---p 00000000 00:00 0 
+7feb94000000-7feb94021000 rw-p 00000000 00:00 0 
+7feb94021000-7feb98000000 ---p 00000000 00:00 0 
+7feb98000000-7feb98100000 rw-p 00000000 00:00 0 
+7feb98200000-7feb98300000 rw-p 00000000 00:00 0 
+7feb98400000-7feb98500000 rw-p 00000000 00:00 0 
+7feb98600000-7feb98700000 rw-p 00000000 00:00 0 
+7feb98800000-7feb98900000 rw-p 00000000 00:00 0 
+7feb98a00000-7feb98b00000 rw-p 00000000 00:00 0 
+7feb98c00000-7feb98d00000 rw-p 00000000 00:00 0 
+7feb98e00000-7feb98f00000 rw-p 00000000 00:00 0 
+7feb99000000-7feb99100000 rw-p 00000000 00:00 0 
+7feb99200000-7feb99300000 rw-p 00000000 00:00 0 
+7feb99400000-7feb99500000 rw-p 00000000 00:00 0 
+7feb995ff000-7feb99600000 ---p 00000000 00:00 0 
+7feb99600000-7feb99603000 ---p 00000000 00:00 0 
+7feb99603000-7feb99f00000 rw-p 00000000 00:00 0 
+7feb9a000000-7feb9a100000 rw-p 00000000 00:00 0 
+7feb9a200000-7feb9a300000 rw-p 00000000 00:00 0 
+7feb9a340000-7feb9bdfe000 r-xp 00000000 08:30 190288                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjvmcicompiler.so
+7feb9bdfe000-7feb9bffd000 ---p 01abe000 08:30 190288                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjvmcicompiler.so
+7feb9bffd000-7feb9bffe000 r--p 01abd000 08:30 190288                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjvmcicompiler.so
+7feb9bffe000-7feb9c000000 rw-p 01abe000 08:30 190288                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjvmcicompiler.so
+7feb9c000000-7feb9c087000 rw-p 00000000 00:00 0 
+7feb9c087000-7feba0000000 ---p 00000000 00:00 0 
+7feba0000000-7feba0021000 rw-p 00000000 00:00 0 
+7feba0021000-7feba4000000 ---p 00000000 00:00 0 
+7feba4000000-7feba40a3000 rw-p 00000000 00:00 0 
+7feba40a3000-7feba8000000 ---p 00000000 00:00 0 
+7feba8000000-7feba8116000 rw-p 00000000 00:00 0 
+7feba8116000-7febac000000 ---p 00000000 00:00 0 
+7febac000000-7febac021000 rw-p 00000000 00:00 0 
+7febac021000-7febb0000000 ---p 00000000 00:00 0 
+7febb0000000-7febb00ec000 rw-p 00000000 00:00 0 
+7febb00ec000-7febb4000000 ---p 00000000 00:00 0 
+7febb4000000-7febb4072000 rw-p 00000000 00:00 0 
+7febb4072000-7febb8000000 ---p 00000000 00:00 0 
+7febb8000000-7febb8021000 rw-p 00000000 00:00 0 
+7febb8021000-7febbc000000 ---p 00000000 00:00 0 
+7febbc000000-7febbc021000 rw-p 00000000 00:00 0 
+7febbc021000-7febc0000000 ---p 00000000 00:00 0 
+7febc0000000-7febc0021000 rw-p 00000000 00:00 0 
+7febc0021000-7febc4000000 ---p 00000000 00:00 0 
+7febc4000000-7febc4021000 rw-p 00000000 00:00 0 
+7febc4021000-7febc8000000 ---p 00000000 00:00 0 
+7febc8000000-7febc8021000 rw-p 00000000 00:00 0 
+7febc8021000-7febcc000000 ---p 00000000 00:00 0 
+7febcc000000-7febcc021000 rw-p 00000000 00:00 0 
+7febcc021000-7febd0000000 ---p 00000000 00:00 0 
+7febd0000000-7febd0021000 rw-p 00000000 00:00 0 
+7febd0021000-7febd4000000 ---p 00000000 00:00 0 
+7febd4000000-7febd4021000 rw-p 00000000 00:00 0 
+7febd4021000-7febd8000000 ---p 00000000 00:00 0 
+7febd8000000-7febd8021000 rw-p 00000000 00:00 0 
+7febd8021000-7febdc000000 ---p 00000000 00:00 0 
+7febdc000000-7febdc021000 rw-p 00000000 00:00 0 
+7febdc021000-7febe0000000 ---p 00000000 00:00 0 
+7febe0100000-7febe0200000 rw-p 00000000 00:00 0 
+7febe0300000-7febe0400000 rw-p 00000000 00:00 0 
+7febe0500000-7febe0600000 rw-p 00000000 00:00 0 
+7febe0700000-7febe0800000 rw-p 00000000 00:00 0 
+7febe08d5000-7febe0a00000 rw-p 00000000 00:00 0 
+7febe0a00000-7febe0a78000 r--s 01159000 08:30 190218                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/jvmci/graal.jar
+7febe0a78000-7febe0ab4000 r--s 007bc000 08:30 190144                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/truffle/truffle-api.jar
+7febe0ab4000-7febe0ad4000 r--s 00243000 08:30 657201                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/4252c1e7/918f5dc3/cats-kernel_3-2.7.0.jar (deleted)
+7febe0ad4000-7febe0aec000 r-xp 00000000 08:30 190293                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libnet.so
+7febe0aec000-7febe0cec000 ---p 00018000 08:30 190293                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libnet.so
+7febe0cec000-7febe0ced000 r--p 00018000 08:30 190293                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libnet.so
+7febe0ced000-7febe0cee000 rw-p 00019000 08:30 190293                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libnet.so
+7febe0cee000-7febe0cff000 r-xp 00000000 08:30 190294                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libnio.so
+7febe0cff000-7febe0efe000 ---p 00011000 08:30 190294                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libnio.so
+7febe0efe000-7febe0eff000 r--p 00010000 08:30 190294                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libnio.so
+7febe0eff000-7febe0f00000 rw-p 00011000 08:30 190294                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libnio.so
+7febe0f00000-7febe137f000 r--p 00e7a000 08:30 190288                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjvmcicompiler.so
+7febe137f000-7febe1400000 r--p 00000000 00:00 0 
+7febe1400000-7febe1483000 rw-p 00000000 00:00 0 
+7febe1483000-7febe1700000 rw-p 013fd000 08:30 190288                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjvmcicompiler.so
+7febe1700000-7febe1b42000 r--p 0167a000 08:30 190288                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjvmcicompiler.so
+7febe1b53000-7febe1b95000 r--s 00622000 08:30 657186                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/07179825/fee952bc/cats-core_3-2.7.0.jar (deleted)
+7febe1b95000-7febe1bd6000 r--s 0056e000 08:30 657183                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/9e90ff0d/184a7a50/scala-library-2.13.6.jar (deleted)
+7febe1bd6000-7febe1bd7000 ---p 00000000 00:00 0 
+7febe1bd7000-7febe1cd7000 rw-p 00000000 00:00 0 
+7febe1cd7000-7febe1cd8000 ---p 00000000 00:00 0 
+7febe1cd8000-7febe1cdb000 ---p 00000000 00:00 0 
+7febe1cdb000-7febe1ed8000 rw-p 00000000 00:00 0 
+7febe1ed8000-7febe1ed9000 ---p 00000000 00:00 0 
+7febe1ed9000-7febe1edc000 ---p 00000000 00:00 0 
+7febe1edc000-7febe20d9000 rw-p 00000000 00:00 0 
+7febe20d9000-7febe20da000 ---p 00000000 00:00 0 
+7febe20da000-7febe20dd000 ---p 00000000 00:00 0 
+7febe20dd000-7febe22da000 rw-p 00000000 00:00 0 
+7febe22da000-7febe22db000 ---p 00000000 00:00 0 
+7febe22db000-7febe22de000 ---p 00000000 00:00 0 
+7febe22de000-7febe24db000 rw-p 00000000 00:00 0 
+7febe24db000-7febe24dc000 ---p 00000000 00:00 0 
+7febe24dc000-7febe24df000 ---p 00000000 00:00 0 
+7febe24df000-7febe26dc000 rw-p 00000000 00:00 0 
+7febe26dc000-7febe26dd000 ---p 00000000 00:00 0 
+7febe26dd000-7febe26e0000 ---p 00000000 00:00 0 
+7febe26e0000-7febe28dd000 rw-p 00000000 00:00 0 
+7febe28dd000-7febe28de000 ---p 00000000 00:00 0 
+7febe28de000-7febe28e1000 ---p 00000000 00:00 0 
+7febe28e1000-7febe2ade000 rw-p 00000000 00:00 0 
+7febe2ade000-7febe2adf000 ---p 00000000 00:00 0 
+7febe2adf000-7febe2ae2000 ---p 00000000 00:00 0 
+7febe2ae2000-7febe2cdf000 rw-p 00000000 00:00 0 
+7febe2cdf000-7febe2ce0000 ---p 00000000 00:00 0 
+7febe2ce0000-7febe2ce3000 ---p 00000000 00:00 0 
+7febe2ce3000-7febfc000000 rw-p 00000000 00:00 0 
+7febfc000000-7febfc021000 rw-p 00000000 00:00 0 
+7febfc021000-7fec00000000 ---p 00000000 00:00 0 
+7fec00000000-7fec00021000 rw-p 00000000 00:00 0 
+7fec00021000-7fec04000000 ---p 00000000 00:00 0 
+7fec04000000-7fec04021000 rw-p 00000000 00:00 0 
+7fec04021000-7fec08000000 ---p 00000000 00:00 0 
+7fec08000000-7fec08021000 rw-p 00000000 00:00 0 
+7fec08021000-7fec0c000000 ---p 00000000 00:00 0 
+7fec0c000000-7fec0c051000 rw-p 00000000 00:00 0 
+7fec0c051000-7fec10000000 ---p 00000000 00:00 0 
+7fec10000000-7fec10021000 rw-p 00000000 00:00 0 
+7fec10021000-7fec14000000 ---p 00000000 00:00 0 
+7fec14000000-7fec14021000 rw-p 00000000 00:00 0 
+7fec14021000-7fec18000000 ---p 00000000 00:00 0 
+7fec18000000-7fec18021000 rw-p 00000000 00:00 0 
+7fec18021000-7fec1c000000 ---p 00000000 00:00 0 
+7fec1c000000-7fec1c021000 rw-p 00000000 00:00 0 
+7fec1c021000-7fec20000000 ---p 00000000 00:00 0 
+7fec20006000-7fec20007000 r--s 00005000 08:30 190216                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/jvmci/graal-management.jar
+7fec20007000-7fec20008000 r--s 00000000 08:30 190217                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/jvmci/graal-truffle-jfr-impl.jar
+7fec20008000-7fec2000c000 r--s 00089000 08:30 190222                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/jvmci/jvmci-hotspot.jar
+7fec2000c000-7fec20010000 r--s 0004f000 08:30 190220                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/jvmci/jvmci-api.jar
+7fec20010000-7fec20011000 r--s 00002000 08:30 190143                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/truffle/locator.jar
+7fec20011000-7fec20013000 r--s 00000000 08:30 657207                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/3754db18/a4d034ac/literally_3-1.0.2.jar (deleted)
+7fec20013000-7fec20014000 r--s 00001000 08:30 657204                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/f68816fd/c1a22143/simulacrum-scalafix-annotations_3-0.5.4.jar (deleted)
+7fec20014000-7fec20019000 r--s 00059000 08:30 657198                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/8c7f033b/979faf45/cats-effect-std_3-3.3.0.jar (deleted)
+7fec20019000-7fec20023000 r--s 00115000 08:30 657195                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/ebdc4930/6577b305/cats-effect-kernel_3-3.3.0.jar (deleted)
+7fec20023000-7fec20026000 r--s 0003d000 08:30 657192                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/0a9063c4/22e2295a/ip4s-core_3-3.1.0.jar (deleted)
+7fec20026000-7fec2002a000 r--s 00054000 08:30 657189                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/6a689533/90c1aba3/scodec-bits_3-1.1.29.jar (deleted)
+7fec2002a000-7fec20030000 r--s 00088000 08:30 657180                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/effd0c89/d0b2fc7a/cats-effect_3-3.3.0.jar (deleted)
+7fec20030000-7fec20038000 r--s 000ad000 08:30 657177                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/81a1ac33/8497c768/fs2-io_3-3.2.0.jar (deleted)
+7fec20038000-7fec20041000 r--s 00131000 08:30 657174                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/a856f486/684f9f71/fs2-core_3-3.2.0.jar (deleted)
+7fec20041000-7fec2004f000 r--s 00117000 08:30 656754                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/ad770cea/f6edefd9/scala3-library_3-3.1.0.jar (deleted)
+7fec2004f000-7fec20050000 r--s 00005000 08:30 652651                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/985735aa/00c76c3e/base_3-HEAD+20211203-1002.jar (deleted)
+7fec20050000-7fec20053000 ---p 00000000 00:00 0 
+7fec20053000-7fec20151000 rw-p 00000000 00:00 0 
+7fec20151000-7fec20152000 ---p 00000000 00:00 0 
+7fec20152000-7fec20155000 ---p 00000000 00:00 0 
+7fec20155000-7fec20352000 rw-p 00000000 00:00 0 
+7fec20352000-7fec20353000 ---p 00000000 00:00 0 
+7fec20353000-7fec20356000 ---p 00000000 00:00 0 
+7fec20356000-7fec20553000 rw-p 00000000 00:00 0 
+7fec20553000-7fec20554000 ---p 00000000 00:00 0 
+7fec20554000-7fec20557000 ---p 00000000 00:00 0 
+7fec20557000-7fec20754000 rw-p 00000000 00:00 0 
+7fec20754000-7fec20757000 ---p 00000000 00:00 0 
+7fec20757000-7fec20855000 rw-p 00000000 00:00 0 
+7fec20855000-7fec20887000 r--p 00000000 08:30 48647                      /usr/lib/locale/C.UTF-8/LC_CTYPE
+7fec20887000-7fec209fa000 r--p 00000000 08:30 48646                      /usr/lib/locale/C.UTF-8/LC_COLLATE
+7fec209fa000-7fec20ce0000 r--p 00000000 08:30 48644                      /usr/lib/locale/locale-archive
+7fec20ce0000-7fec20ce3000 ---p 00000000 00:00 0 
+7fec20ce3000-7fec20de1000 rw-p 00000000 00:00 0 
+7fec20de1000-7fec20de4000 ---p 00000000 00:00 0 
+7fec20de4000-7fec20ee2000 rw-p 00000000 00:00 0 
+7fec20ee2000-7fec20ee3000 ---p 00000000 00:00 0 
+7fec20ee3000-7fec24000000 rw-p 00000000 00:00 0 
+7fec24000000-7fec24021000 rw-p 00000000 00:00 0 
+7fec24021000-7fec28000000 ---p 00000000 00:00 0 
+7fec28000000-7fec28054000 rw-p 00000000 00:00 0 
+7fec28054000-7fec2c000000 ---p 00000000 00:00 0 
+7fec2c000000-7fec2c021000 rw-p 00000000 00:00 0 
+7fec2c021000-7fec30000000 ---p 00000000 00:00 0 
+7fec30000000-7fec30021000 rw-p 00000000 00:00 0 
+7fec30021000-7fec34000000 ---p 00000000 00:00 0 
+7fec34000000-7fec34021000 rw-p 00000000 00:00 0 
+7fec34021000-7fec38000000 ---p 00000000 00:00 0 
+7fec38000000-7fec38021000 rw-p 00000000 00:00 0 
+7fec38021000-7fec3c000000 ---p 00000000 00:00 0 
+7fec3c000000-7fec3c021000 rw-p 00000000 00:00 0 
+7fec3c021000-7fec40000000 ---p 00000000 00:00 0 
+7fec40000000-7fec40021000 rw-p 00000000 00:00 0 
+7fec40021000-7fec44000000 ---p 00000000 00:00 0 
+7fec44000000-7fec44021000 rw-p 00000000 00:00 0 
+7fec44021000-7fec48000000 ---p 00000000 00:00 0 
+7fec48000000-7fec48008000 r--s 00085000 08:30 190259                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/boot/graal-sdk.jar
+7fec48008000-7fec48be5000 rw-p 00000000 00:00 0 
+7fec48be5000-7fec48db7000 r--s 03ca4000 08:30 190137                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/rt.jar
+7fec48db7000-7fec4b03a000 rw-p 00000000 00:00 0 
+7fec4b03a000-7fec4b03b000 ---p 00000000 00:00 0 
+7fec4b03b000-7fec4b13b000 rw-p 00000000 00:00 0 
+7fec4b13b000-7fec4b13c000 ---p 00000000 00:00 0 
+7fec4b13c000-7fec4b23c000 rw-p 00000000 00:00 0 
+7fec4b23c000-7fec4b23d000 ---p 00000000 00:00 0 
+7fec4b23d000-7fec4b33d000 rw-p 00000000 00:00 0 
+7fec4b33d000-7fec4b33e000 ---p 00000000 00:00 0 
+7fec4b33e000-7fec4b43e000 rw-p 00000000 00:00 0 
+7fec4b43e000-7fec4b43f000 ---p 00000000 00:00 0 
+7fec4b43f000-7fec4b53f000 rw-p 00000000 00:00 0 
+7fec4b53f000-7fec4b540000 ---p 00000000 00:00 0 
+7fec4b540000-7fec4b640000 rw-p 00000000 00:00 0 
+7fec4b640000-7fec4b641000 ---p 00000000 00:00 0 
+7fec4b641000-7fec4b741000 rw-p 00000000 00:00 0 
+7fec4b741000-7fec4b742000 ---p 00000000 00:00 0 
+7fec4b742000-7fec4b842000 rw-p 00000000 00:00 0 
+7fec4b842000-7fec4b843000 ---p 00000000 00:00 0 
+7fec4b843000-7fec4b943000 rw-p 00000000 00:00 0 
+7fec4b943000-7fec4b944000 ---p 00000000 00:00 0 
+7fec4b944000-7fec4ba44000 rw-p 00000000 00:00 0 
+7fec4ba44000-7fec4ba45000 ---p 00000000 00:00 0 
+7fec4ba45000-7fec4bb45000 rw-p 00000000 00:00 0 
+7fec4bb45000-7fec4bb46000 ---p 00000000 00:00 0 
+7fec4bb46000-7fec4bc46000 rw-p 00000000 00:00 0 
+7fec4bc46000-7fec4bc47000 ---p 00000000 00:00 0 
+7fec4bc47000-7fec4bd47000 rw-p 00000000 00:00 0 
+7fec4bd47000-7fec4bd48000 ---p 00000000 00:00 0 
+7fec4bd48000-7fec4be48000 rw-p 00000000 00:00 0 
+7fec4be48000-7fec4be49000 ---p 00000000 00:00 0 
+7fec4be49000-7fec4bff6000 rw-p 00000000 00:00 0 
+7fec4bff6000-7fec4d000000 ---p 00000000 00:00 0 
+7fec4d000000-7fec4d670000 rwxp 00000000 00:00 0 
+7fec4d670000-7fec5c000000 ---p 00000000 00:00 0 
+7fec5c000000-7fec5c8a7000 rw-p 00000000 00:00 0 
+7fec5c8a7000-7fec60000000 ---p 00000000 00:00 0 
+7fec60000000-7fec60001000 r--s 00002000 08:30 656746                     /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/job-14/target/fbc468f1/e92cdb1e/three_3-HEAD+20211203-1002.jar (deleted)
+7fec60001000-7fec60006000 r--s 0005b000 08:30 190260                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/boot/graal-sdk.src.zip
+7fec60006000-7fec60007000 r--s 0000f000 08:30 190261                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/boot/graaljs-scriptengine.jar
+7fec60007000-7fec60008000 r--s 00005000 08:30 190118                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/jvmci-services.jar
+7fec60008000-7fec6000e000 r--s 000d3000 08:30 190114                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/jfr.jar
+7fec6000e000-7fec6000f000 r--p 00000000 08:30 48653                      /usr/lib/locale/C.UTF-8/LC_NUMERIC
+7fec6000f000-7fec60010000 r--p 00000000 08:30 48656                      /usr/lib/locale/C.UTF-8/LC_TIME
+7fec60010000-7fec60011000 r--p 00000000 08:30 48651                      /usr/lib/locale/C.UTF-8/LC_MONETARY
+7fec60011000-7fec60012000 r--p 00000000 08:30 48657                      /usr/lib/locale/C.UTF-8/LC_MESSAGES/SYS_LC_MESSAGES
+7fec60012000-7fec60013000 r--p 00000000 08:30 48654                      /usr/lib/locale/C.UTF-8/LC_PAPER
+7fec60013000-7fec60014000 r--p 00000000 08:30 48652                      /usr/lib/locale/C.UTF-8/LC_NAME
+7fec60014000-7fec60015000 r--p 00000000 08:30 48645                      /usr/lib/locale/C.UTF-8/LC_ADDRESS
+7fec60015000-7fec60016000 r--p 00000000 08:30 48655                      /usr/lib/locale/C.UTF-8/LC_TELEPHONE
+7fec60016000-7fec60099000 rw-p 00000000 00:00 0 
+7fec60099000-7fec6009a000 ---p 00000000 00:00 0 
+7fec6009a000-7fec6019a000 rw-p 00000000 00:00 0 
+7fec6019a000-7fec6019b000 ---p 00000000 00:00 0 
+7fec6019b000-7fec6029b000 rw-p 00000000 00:00 0 
+7fec6029b000-7fec6029c000 ---p 00000000 00:00 0 
+7fec6029c000-7fec60449000 rw-p 00000000 00:00 0 
+7fec60449000-7fec61452000 ---p 00000000 00:00 0 
+7fec61452000-7fec61cad000 rw-p 00000000 00:00 0 
+7fec61cad000-7fec61cae000 ---p 00000000 00:00 0 
+7fec61cae000-7fec61cc9000 rw-p 00000000 00:00 0 
+7fec61cc9000-7fec6206f000 ---p 00000000 00:00 0 
+7fec6206f000-7fec62077000 r-xp 00000000 08:30 190303                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libzip.so
+7fec62077000-7fec62276000 ---p 00008000 08:30 190303                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libzip.so
+7fec62276000-7fec62277000 r--p 00007000 08:30 190303                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libzip.so
+7fec62277000-7fec62278000 rw-p 00008000 08:30 190303                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libzip.so
+7fec62278000-7fec6227b000 r--p 00000000 08:30 37826                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fec6227b000-7fec62282000 r-xp 00003000 08:30 37826                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fec62282000-7fec62284000 r--p 0000a000 08:30 37826                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fec62284000-7fec62285000 r--p 0000b000 08:30 37826                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fec62285000-7fec62286000 rw-p 0000c000 08:30 37826                      /usr/lib/x86_64-linux-gnu/libnss_files-2.31.so
+7fec62286000-7fec6228c000 rw-p 00000000 00:00 0 
+7fec6228c000-7fec6228d000 r--p 00000000 08:30 48649                      /usr/lib/locale/C.UTF-8/LC_MEASUREMENT
+7fec6228d000-7fec62294000 r--s 00000000 08:30 39892                      /usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache
+7fec62294000-7fec62295000 r--p 00000000 08:30 48648                      /usr/lib/locale/C.UTF-8/LC_IDENTIFICATION
+7fec62295000-7fec622bd000 r-xp 00000000 08:30 190278                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjava.so
+7fec622bd000-7fec624bc000 ---p 00028000 08:30 190278                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjava.so
+7fec624bc000-7fec624bd000 r--p 00027000 08:30 190278                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjava.so
+7fec624bd000-7fec624bf000 rw-p 00028000 08:30 190278                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libjava.so
+7fec624bf000-7fec624ce000 r-xp 00000000 08:30 190302                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libverify.so
+7fec624ce000-7fec626cd000 ---p 0000f000 08:30 190302                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libverify.so
+7fec626cd000-7fec626cf000 r--p 0000e000 08:30 190302                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libverify.so
+7fec626cf000-7fec626d0000 rw-p 00010000 08:30 190302                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/libverify.so
+7fec626d0000-7fec626d3000 r--p 00000000 08:30 37925                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fec626d3000-7fec626d7000 r-xp 00003000 08:30 37925                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fec626d7000-7fec626d8000 r--p 00007000 08:30 37925                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fec626d8000-7fec626d9000 ---p 00008000 08:30 37925                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fec626d9000-7fec626da000 r--p 00008000 08:30 37925                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fec626da000-7fec626db000 rw-p 00009000 08:30 37925                      /usr/lib/x86_64-linux-gnu/librt-2.31.so
+7fec626db000-7fec626dc000 ---p 00000000 00:00 0 
+7fec626dc000-7fec626df000 ---p 00000000 00:00 0 
+7fec626df000-7fec627dc000 rw-p 00000000 00:00 0 
+7fec627dc000-7fec627eb000 r--p 00000000 08:30 37765                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fec627eb000-7fec62892000 r-xp 0000f000 08:30 37765                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fec62892000-7fec62929000 r--p 000b6000 08:30 37765                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fec62929000-7fec6292a000 r--p 0014c000 08:30 37765                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fec6292a000-7fec6292b000 rw-p 0014d000 08:30 37765                      /usr/lib/x86_64-linux-gnu/libm-2.31.so
+7fec6292b000-7fec63761000 r-xp 00000000 08:30 190306                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/server/libjvm.so
+7fec63761000-7fec63961000 ---p 00e36000 08:30 190306                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/server/libjvm.so
+7fec63961000-7fec63a2c000 rw-p 00e36000 08:30 190306                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/server/libjvm.so
+7fec63a2c000-7fec63a63000 rw-p 00000000 00:00 0 
+7fec63a63000-7fec63a88000 r--p 00000000 08:30 37482                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fec63a88000-7fec63c00000 r-xp 00025000 08:30 37482                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fec63c00000-7fec63c4a000 r--p 0019d000 08:30 37482                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fec63c4a000-7fec63c4b000 ---p 001e7000 08:30 37482                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fec63c4b000-7fec63c4e000 r--p 001e7000 08:30 37482                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fec63c4e000-7fec63c51000 rw-p 001ea000 08:30 37482                      /usr/lib/x86_64-linux-gnu/libc-2.31.so
+7fec63c51000-7fec63c55000 rw-p 00000000 00:00 0 
+7fec63c55000-7fec63c56000 r--p 00000000 08:30 37533                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fec63c56000-7fec63c58000 r-xp 00001000 08:30 37533                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fec63c58000-7fec63c59000 r--p 00003000 08:30 37533                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fec63c59000-7fec63c5a000 r--p 00003000 08:30 37533                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fec63c5a000-7fec63c5b000 rw-p 00004000 08:30 37533                      /usr/lib/x86_64-linux-gnu/libdl-2.31.so
+7fec63c5b000-7fec63c68000 r-xp 00000000 08:30 190309                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/jli/libjli.so
+7fec63c68000-7fec63e68000 ---p 0000d000 08:30 190309                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/jli/libjli.so
+7fec63e68000-7fec63e69000 r--p 0000d000 08:30 190309                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/jli/libjli.so
+7fec63e69000-7fec63e6a000 rw-p 0000e000 08:30 190309                     /home/dpol/.cache/coursier/jvm/graalvm@21.1.0/jre/lib/amd64/jli/libjli.so
+7fec63e6a000-7fec63e6c000 r--p 00000000 08:30 38145                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fec63e6c000-7fec63e7d000 r-xp 00002000 08:30 38145                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fec63e7d000-7fec63e83000 r--p 00013000 08:30 38145                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fec63e83000-7fec63e84000 ---p 00019000 08:30 38145                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fec63e84000-7fec63e85000 r--p 00019000 08:30 38145                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fec63e85000-7fec63e86000 rw-p 0001a000 08:30 38145                      /usr/lib/x86_64-linux-gnu/libz.so.1.2.11
+7fec63e86000-7fec63e8d000 r--p 00000000 08:30 37901                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fec63e8d000-7fec63e9e000 r-xp 00007000 08:30 37901                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fec63e9e000-7fec63ea3000 r--p 00018000 08:30 37901                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fec63ea3000-7fec63ea4000 r--p 0001c000 08:30 37901                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fec63ea4000-7fec63ea5000 rw-p 0001d000 08:30 37901                      /usr/lib/x86_64-linux-gnu/libpthread-2.31.so
+7fec63ea5000-7fec63ea9000 rw-p 00000000 00:00 0 
+7fec63ea9000-7fec63eb1000 rw-s 00000000 08:30 656747                     /tmp/hsperfdata_dpol/23619
+7fec63eb1000-7fec63eb4000 rw-p 00000000 00:00 0 
+7fec63eb4000-7fec63eb5000 r--p 00000000 08:30 37420                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fec63eb5000-7fec63ed8000 r-xp 00001000 08:30 37420                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fec63ed8000-7fec63ee0000 r--p 00024000 08:30 37420                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fec63ee0000-7fec63ee1000 r--p 00000000 00:00 0 
+7fec63ee1000-7fec63ee2000 r--p 0002c000 08:30 37420                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fec63ee2000-7fec63ee3000 rw-p 0002d000 08:30 37420                      /usr/lib/x86_64-linux-gnu/ld-2.31.so
+7fec63ee3000-7fec63ee4000 rw-p 00000000 00:00 0 
+7ffe9e665000-7ffe9e687000 rw-p 00000000 00:00 0                          [stack]
+7ffe9e752000-7ffe9e755000 r--p 00000000 00:00 0                          [vvar]
+7ffe9e755000-7ffe9e756000 r-xp 00000000 00:00 0                          [vdso]
+
+VM Arguments:
+java_command: dpol.Main
+java_class_path (initial): /home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/job-14/target/fbc468f1/e92cdb1e/three_3-HEAD+20211203-1002.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/985735aa/00c76c3e/base_3-HEAD+20211203-1002.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/ad770cea/f6edefd9/scala3-library_3-3.1.0.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/a856f486/684f9f71/fs2-core_3-3.2.0.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/81a1ac33/8497c768/fs2-io_3-3.2.0.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/effd0c89/d0b2fc7a/cats-effect_3-3.3.0.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/9e90ff0d/184a7a50/scala-library-2.13.6.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/07179825/fee952bc/cats-core_3-2.7.0.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/6a689533/90c1aba3/scodec-bits_3-1.1.29.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/0a9063c4/22e2295a/ip4s-core_3-3.1.0.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/ebdc4930/6577b305/cats-effect-kernel_3-3.3.0.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/8c7f033b/979faf45/cats-effect-std_3-3.3.0.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/4252c1e7/918f5dc3/cats-kernel_3-2.7.0.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/f68816fd/c1a22143/simulacrum-scalafix-annotations_3-0.5.4.jar:/home/dpol/misc/aoc2021/target/bg-jobs/sbt_6a2fd61e/target/3754db18/a4d034ac/literally_3-1.0.2.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/home/dpol/.cache/coursier/jvm/graalvm@21.1.0
+PATH=/home/dpol/.nix-profile/bin:/home/dpol/.local/share/coursier/bin:/home/dpol/.nix-profile/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Windows/System32:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/Domas/AppData/Local/Microsoft/WindowsApps:/home/dpol/.cache/coursier/jvm/graalvm@21.1.0/bin:/home/dpol/.cache/coursier/jvm/graalvm@21.1.0/bin
+SHELL=/usr/bin/fish
+HOSTTYPE=x86_64
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0xbe9020], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGBUS: [libjvm.so+0xbe9020], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGFPE: [libjvm.so+0xa11570], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGPIPE: [libjvm.so+0xa11570], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGXFSZ: [libjvm.so+0xa11570], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGILL: [libjvm.so+0xa11570], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGUSR1: SIG_DFL, sa_mask[0]=00000000000000000000000000000000, sa_flags=none
+SIGUSR2: [libjvm.so+0xa11440], sa_mask[0]=00100000000000000000000000000000, sa_flags=SA_RESTART|SA_SIGINFO
+SIGHUP: [libjvm.so+0xa11a60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGINT: [libjvm.so+0xa11a60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGTERM: [libjvm.so+0xa11a60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+SIGQUIT: [libjvm.so+0xa11a60], sa_mask[0]=11111111011111111101111111111110, sa_flags=SA_RESTART|SA_SIGINFO
+
+
+---------------  S Y S T E M  ---------------
+
+OS:DISTRIB_ID=Ubuntu
+DISTRIB_RELEASE=20.04
+DISTRIB_CODENAME=focal
+DISTRIB_DESCRIPTION="Ubuntu 20.04.3 LTS"
+
+uname:Linux 5.4.72-microsoft-standard-WSL2 #1 SMP Wed Oct 28 23:40:43 UTC 2020 x86_64
+libc:glibc 2.31 NPTL 2.31 
+rlimit: STACK 8192k, CORE 0k, NPROC 205356, NOFILE 4096, AS infinity
+load average:5.06 5.58 5.60
+
+/proc/meminfo:
+MemTotal:       52575788 kB
+MemFree:        13811684 kB
+MemAvailable:   16932264 kB
+Buffers:          610736 kB
+Cached:          3249800 kB
+SwapCached:            0 kB
+Active:         36294140 kB
+Inactive:        1783912 kB
+Active(anon):   34239284 kB
+Inactive(anon):   351560 kB
+Active(file):    2054856 kB
+Inactive(file):  1432352 kB
+Unevictable:           0 kB
+Mlocked:               0 kB
+SwapTotal:      13631488 kB
+SwapFree:       13631488 kB
+Dirty:               132 kB
+Writeback:             0 kB
+AnonPages:      33965076 kB
+Mapped:           348488 kB
+Shmem:            376972 kB
+KReclaimable:     251064 kB
+Slab:             382868 kB
+SReclaimable:     251064 kB
+SUnreclaim:       131804 kB
+KernelStack:       26096 kB
+PageTables:        90376 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:    39919380 kB
+Committed_AS:   45897340 kB
+VmallocTotal:   34359738367 kB
+VmallocUsed:       49360 kB
+VmallocChunk:          0 kB
+Percpu:             9024 kB
+AnonHugePages:  26308608 kB
+ShmemHugePages:        0 kB
+ShmemPmdMapped:        0 kB
+FileHugePages:         0 kB
+FilePmdMapped:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+Hugetlb:               0 kB
+DirectMap4k:       13312 kB
+DirectMap2M:     3266560 kB
+DirectMap1G:    51380224 kB
+
+container (cgroup) information:
+container_type: cgroupv1
+cpu_cpuset_cpus: 0-23
+cpu_memory_nodes: 0
+active_processor_count: 24
+cpu_quota: -1
+cpu_period: 100000
+cpu_shares: -1
+memory_limit_in_bytes: -1
+memory_and_swap_limit_in_bytes: -1
+memory_soft_limit_in_bytes: -1
+memory_usage_in_bytes: 38983426048
+memory_max_usage_in_bytes: 22587965440
+
+
+CPU:total 24 (initial active 24) (32 cores per cpu, 1 threads per core) family 23 model 113 stepping 0, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, mmxext, 3dnowpref, lzcnt, sse4a, tsc, bmi1
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 0
+cpu cores	: 12
+apicid		: 0
+initial apicid	: 0
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7599.99
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 0
+cpu cores	: 12
+apicid		: 1
+initial apicid	: 1
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7031.85
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 2
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 1
+cpu cores	: 12
+apicid		: 2
+initial apicid	: 2
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7652.28
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 3
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 1
+cpu cores	: 12
+apicid		: 3
+initial apicid	: 3
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7845.45
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 4
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 2
+cpu cores	: 12
+apicid		: 4
+initial apicid	: 4
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7953.71
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 5
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 2
+cpu cores	: 12
+apicid		: 5
+initial apicid	: 5
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7427.42
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 6
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 3
+cpu cores	: 12
+apicid		: 6
+initial apicid	: 6
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7616.02
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 7
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 3
+cpu cores	: 12
+apicid		: 7
+initial apicid	: 7
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7753.29
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 8
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 4
+cpu cores	: 12
+apicid		: 8
+initial apicid	: 8
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7673.74
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 9
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 4
+cpu cores	: 12
+apicid		: 9
+initial apicid	: 9
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7609.76
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 10
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 5
+cpu cores	: 12
+apicid		: 10
+initial apicid	: 10
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7561.73
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 11
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 5
+cpu cores	: 12
+apicid		: 11
+initial apicid	: 11
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7631.99
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 12
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 6
+cpu cores	: 12
+apicid		: 12
+initial apicid	: 12
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7651.07
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 13
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 6
+cpu cores	: 12
+apicid		: 13
+initial apicid	: 13
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7662.31
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 14
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 7
+cpu cores	: 12
+apicid		: 14
+initial apicid	: 14
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7779.96
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 15
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 7
+cpu cores	: 12
+apicid		: 15
+initial apicid	: 15
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7623.41
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 16
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 8
+cpu cores	: 12
+apicid		: 16
+initial apicid	: 16
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7618.33
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 17
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 8
+cpu cores	: 12
+apicid		: 17
+initial apicid	: 17
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7638.32
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 18
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 9
+cpu cores	: 12
+apicid		: 18
+initial apicid	: 18
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7643.19
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 19
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 9
+cpu cores	: 12
+apicid		: 19
+initial apicid	: 19
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7609.18
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 20
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 10
+cpu cores	: 12
+apicid		: 20
+initial apicid	: 20
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7546.82
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 21
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 10
+cpu cores	: 12
+apicid		: 21
+initial apicid	: 21
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7599.30
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 22
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 11
+cpu cores	: 12
+apicid		: 22
+initial apicid	: 22
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7599.76
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+processor	: 23
+vendor_id	: AuthenticAMD
+cpu family	: 23
+model		: 113
+model name	: AMD Ryzen 9 3900X 12-Core Processor
+stepping	: 0
+microcode	: 0xffffffff
+cpu MHz		: 3799.998
+cache size	: 512 KB
+physical id	: 0
+siblings	: 24
+core id		: 11
+cpu cores	: 12
+apicid		: 23
+initial apicid	: 23
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 13
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ht syscall nx mmxext fxsr_opt pdpe1gb rdtscp lm rep_good nopl cpuid extd_apicid pni pclmulqdq ssse3 fma cx16 sse4_1 sse4_2 movbe popcnt aes xsave avx f16c rdrand hypervisor lahf_lm cmp_legacy cr8_legacy abm sse4a misalignsse 3dnowprefetch osvw topoext ssbd ibpb stibp vmmcall fsgsbase bmi1 avx2 smep bmi2 rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves clzero xsaveerptr virt_ssbd arat umip rdpid
+bugs		: sysret_ss_attrs spectre_v1 spectre_v2 spec_store_bypass
+bogomips	: 7600.66
+TLB size	: 3072 4K pages
+clflush size	: 64
+cache_alignment	: 64
+address sizes	: 48 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 52575788k(13811684k free), swap 13631488k(13631488k free)
+
+vm_info: OpenJDK 64-Bit Server VM GraalVM CE 21.1.0 (25.292-b09-jvmci-21.1-b05) for linux-amd64 JRE (1.8.0), built on Apr 12 2021 16:25:38 by "buildslave" with gcc 7.3.0
+
+time: Fri Dec  3 12:42:50 2021
+timezone: CET
+elapsed time: 6077.587830 seconds (0d 1h 41m 17s)
+
