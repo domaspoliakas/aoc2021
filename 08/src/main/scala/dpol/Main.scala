@@ -10,6 +10,20 @@ import cats.data.NonEmptyList
 import cats.data.NonEmptySet
 import cats.kernel.Order
 
+opaque type Wire = String
+object Wire:
+  def apply(c: String): Wire = c
+  def asString(w: Wire): String = w
+  extension (w: Wire)
+    def char: Char = w.charAt(0)
+
+opaque type Display = String
+object Display:
+  def apply(c: String): Display = c
+  def asString(w: Display): String = w
+  extension (w: Display)
+    def char: Char = w.charAt(0)
+
 object Main extends AocAppStreamed(8, DoPart.Two):
 
   val parser =
@@ -36,129 +50,84 @@ object Main extends AocAppStreamed(8, DoPart.Two):
       .compile
       .foldMonoid
 
+  val all = List("a", "b", "c", "d", "e", "f", "g")
+
   val numberWires =
     Map(
-      0 -> List('a', 'b', 'c', 'e', 'f', 'g'),
-      1 -> List('c', 'f'),
-      2 -> List('a', 'c', 'd', 'e', 'g'),
-      3 -> List('a', 'c', 'd', 'f', 'g'),
-      4 -> List('b', 'c', 'd', 'f'),
-      5 -> List('a', 'b', 'd', 'f', 'g'),
-      6 -> List('a', 'b', 'd', 'e', 'f', 'g'),
-      7 -> List('a', 'c', 'f'),
-      8 -> List('a', 'b', 'c', 'd', 'e', 'f', 'g'),
-      9 -> List('a', 'b', 'c', 'd', 'f', 'g')
-    )
+      0 -> List("a", "b", "c", "e", "f", "g"),
+      1 -> List("c", "f"),
+      2 -> List("a", "c", "d", "e", "g"),
+      3 -> List("a", "c", "d", "f", "g"),
+      4 -> List("b", "c", "d", "f"),
+      5 -> List("a", "b", "d", "f", "g"),
+      6 -> List("a", "b", "d", "e", "f", "g"),
+      7 -> List("a", "c", "f"),
+      8 -> all,
+      9 -> List("a", "b", "c", "d", "f", "g")
+    ).view.mapValues(_.map(Wire(_))).toMap
+
+  val numberWireM: Map[Set[Char], Int] =
+    numberWires.toList.map((num, s) =>
+        s.map(_.char).toSet -> num
+      ).toMap
 
   val wireNumbers = numberWires.toList
     .map(_.swap)
     .toMap
 
-  def dedooce(
-      inputs: NonEmptyList[NonEmptyList[Char]],
-      availableNumbers: List[Int],
-      currentMappings: Map[Char, Char],
-      unmapped: List[Char]
-  ): List[Map[String, Int]] =
+  def deduc(
+      mapped: Map[Wire, Set[Display]],
+      a: List[(List[List[Wire]], List[Display])]
+  ): List[Map[Wire, Set[Display]]] = a match
+    case (possibleWiresMany, observedDisplays) :: t =>
+      possibleWiresMany.flatMap { possibleWires =>
+        val r = mapped.map { case (wire, possibleDisplays) =>
+          wire -> (if (possibleWires.contains(wire))
+                     possibleDisplays.intersect(observedDisplays.toSet)
+                   else
+                     possibleDisplays.removedAll(observedDisplays))
+        }
 
-    println(inputs)
-    println(availableNumbers)
-    println(currentMappings)
-    println(unmapped)
+        if (r.exists(_._2.isEmpty))
+          List()
+        else
+          deduc(r, t)
+      }
+    case Nil =>
+      List(mapped)
 
-    def configurations(
-        wires: List[Char],
-        boop: List[Char]
-    ): List[List[(Char, Char)]] =
-      def go(
-          back: List[Char],
-          forward: List[Char],
-          l: Char
-      ): List[((Char, Char), List[Char])] = forward match
-        case Nil => Nil
-        case h :: t =>
-          ((l -> h) -> (back ::: t)) :: go(back ::: List(h), t, l)
-
-      wires match
-        case Nil => Nil
-        case h :: t =>
-          val a = go(Nil, boop, h)
-          a.flatMap((one, others) =>
-            configurations(t, others) match
-              case Nil => List(List(one))
-              case t   => t.map(one :: _)
-          )
-
-    inputs match {
-      case NonEmptyList(h, t) =>
-        val l = h.size match
-          case 2 => List(1)
-          case 3 => List(7)
-          case 4 => List(4)
-          case 5 => List(2, 3, 5)
-          case 6 => List(0, 6, 9)
-          case 7 => List(8)
-
-        val ll = l
-          .filter(v => availableNumbers.contains(v))
-          .flatMap { (num) =>
-
-            val v = numberWires(num)
-
-            val (unfound, found) = v.partitionEither(v =>
-              currentMappings.get(v).tupleLeft(v).toRight(v)
-            )
-
-            val newMappings =
-              if (unfound.isEmpty)
-                List(currentMappings)
-              else
-                configurations(unfound, unmapped).map(
-                  _.toMap ++ currentMappings
-                )
-
-            NonEmptyList.fromList(t) match
-              case None =>
-                newMappings.map(newMapping =>
-                  wireNumbers.toList
-                    .map((wires, number) =>
-                      wires.map(newMapping.apply).mkString -> number
-                    )
-                    .toMap
-                )
-
-              case Some(x) =>
-                newMappings.flatMap(newMapping =>
-                  dedooce(
-                    x,
-                    availableNumbers.filter(_ != num),
-                    newMapping,
-                    unmapped.filterNot(newMapping.contains(_))
-                  )
-                )
-
-          }
-
-        ll
-
-    }
 
   def part2(inputFile: Stream[IO, String]): IO[String] =
+    val olinho = all.map(v => Wire(v) -> all.toSet.map(v => Display(v))).toMap
+
     inputFile
       .filter(_.nonEmpty)
       .evalMap(s =>
         IO.fromEither(parser.parse(s).leftMap(e => new Exception(s"hek: $e")))
       )
-      .map { v =>
-        val m = dedooce(
-          v._2._1,
-          (0 to 9).toList,
-          Map.empty,
-          List('a', 'b', 'c', 'd', 'e', 'f', 'g')
-        )
-        val f = m.head
-        v._2._2.map(v => f(v.mkString_("")))
-      }
-      .debug()
+      .evalMap { v =>
+        val potato = v._2._1.map { h =>
+          h.map(v => Display(v.toString)) -> (h.size match
+            case 2 => List(1)
+            case 3 => List(7)
+            case 4 => List(4)
+            case 5 => List(2, 3, 5)
+            case 6 => List(0, 6, 9)
+            case 7 => List(8)
+          )
+        }.map { (display, nums) =>
+          nums.map(numberWires(_)) -> display.toList
+        }.toList
+
+        IO.fromOption(deduc(
+          olinho,
+          potato
+        ).find(_.forall(_._2.size == 1)).map(s => s.view.mapValues(_.head).toMap))(new Exception("no good")).tupleRight(v._2._2)
+      }.map((mappingFunc, inputs) =>
+        val remap = mappingFunc.toList.map(_.swap.bimap(_.char, _.char)).toMap
+        inputs.map { v => 
+          numberWireM(v.map(remap).toList.toSet)
+        }
+      ).map(_.mkString_("").toInt)
       .compile
-      .drain
+      .foldMonoid

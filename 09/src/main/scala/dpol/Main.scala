@@ -142,20 +142,3 @@ object Main extends AocAppStreamed(9, DoPart.Two):
         (res2(0)._2 * res2(1)._2 * res2(2)._2).toString
 
       }
-
-// inputFile
-//   .filter(_.nonEmpty)
-//   .evalMap(a =>
-//     IO.fromEither(
-//       Rfc5234.digit.rep
-//         .map(_.map(_.toString.toInt))
-//         .parse(a)
-//         .leftMap(e => new Exception(e.toString))
-//     ).map(_._2)
-//   )
-//   .compile
-//   .toList.map(
-//     grid =>
-//       Map.empty[(Int, Int), Either[(Int, Int), Int]]
-
-//       )
